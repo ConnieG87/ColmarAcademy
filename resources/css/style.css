@@ -1,0 +1,60 @@
+html {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  margin: 0 24px;
+}
+
+header .container {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  height: 32px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  padding-left: 16px;
+}
+
+nav.mobile {
+  display: none;
+}
+
+.banner {
+  background-color: grey;
+}
+
+.banner .container {
+  display: flex;
+}
+
+.banner .img-container {
+  width: 60%;
+  height: 400px;
+  overflow: hidden;
+  border: 1px solid red;
+}
+
+.banner .img-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid blue;
+}
