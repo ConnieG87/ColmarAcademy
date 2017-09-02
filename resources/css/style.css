@@ -46,15 +46,18 @@ nav.mobile {
 }
 
 .banner .img-container {
+  background-image: url('../images/banner.jpg');
+  background-size: cover;
+  background-position: center;
   width: 60%;
-  height: 400px;
+  height: 600px;
   overflow: hidden;
-  border: 1px solid red;
+  margin: 32px 0;
 }
-
+/*
 .banner .img-container img {
   max-width: 100%;
   height: auto;
   display: block;
   border: 1px solid blue;
-}
+}*/
