@@ -3,22 +3,18 @@ html {
   font-size: 14px;
 }
 
-body {
-  line-height: 1.4rem;
-}
-
 a {
   text-decoration: none;
   color: black;
 }
 
 .container {
+  display: flex;
   margin: 0 24px;
 }
 
 header .container {
   height: 64px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -45,10 +41,6 @@ nav.mobile {
 
 .banner {
   background-color: #B7B1A9;
-}
-
-.banner .container {
-  display: flex;
 }
 
 .banner .img-container {
@@ -81,7 +73,7 @@ h1 {
 h2 {
   font-size: 1.5rem;
   font-weight: bold;
-  padding-bottom: 24px;
+  padding-top: 32px;
 }
 
 h3 {
@@ -108,9 +100,6 @@ h3 {
   margin: 32px 0;
 }
 
-.information .container {
-  display: flex;
-}
 
 .main-article {
   display: flex;
@@ -122,13 +111,16 @@ h3 {
 .main-article .img-container {
   height: auto;
   overflow: hidden;
-  margin-bottom: 32px;
 }
 
 .main-article .img-container img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+.main-article h2 {
+  padding-bottom: 24px;
 }
 
 p .author {
@@ -171,4 +163,41 @@ p .author {
   flex-direction: column;
   justify-content: center;
   padding-left: 16px;
+}
+
+.courses {
+  background-color: #B7B1A9;
+}
+
+.container.small {
+  margin: 0 56px;
+  flex-wrap: wrap;
+}
+
+.courses h2 {
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+.course {
+  width: 30%;
+  margin: 16px;
+  flex-grow: 1;
+  background-color: white;
+}
+
+.course img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.course-info {
+  padding: 16px 16px 24px 16px;
+}
+
+span.category {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
