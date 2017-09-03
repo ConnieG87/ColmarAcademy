@@ -21,6 +21,7 @@ header .container {
 
 header .logo {
   font-size: 1.5rem;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   height: 32px;
@@ -96,16 +97,12 @@ h3 {
   margin: 0 auto;*/
 }
 
-.information {
-  margin: 32px 0;
-}
-
-
 .main-article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 60%;
+  padding: 32px 0;
 }
 
 .main-article .img-container {
@@ -127,11 +124,17 @@ p .author {
   font-size: 0.75rem;
 }
 
-.featured-info {
+.featured-info, .featured-theses {
   width: 40%;
   display: flex;
   flex-direction: column;
   margin-left: 24px;
+}
+
+.featured-info {
+  padding: 32px 0;
+  /*Specs show left-border here, but this is removed for aesthetic reasons*/
+  /*border-left: 1px solid #B7B1A9; */
 }
 
 .info-item {
@@ -167,6 +170,7 @@ p .author {
 
 .courses {
   background-color: #B7B1A9;
+  padding-bottom: 16px;
 }
 
 .container.small {
@@ -200,4 +204,55 @@ span.category {
   display: block;
   text-transform: uppercase;
   margin-bottom: 8px;
+}
+
+.thesis h2 {
+  text-align: center;
+  padding-bottom: 32px;
+}
+
+.video-section {
+  width: 60%;
+}
+
+.thesis .img-container {
+  height: auto;
+  overflow: hidden;
+}
+
+.thesis .img-container video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.video-section h3 {
+  padding-top: 24px;
+}
+
+.acc-article {
+  margin-bottom: 32px;
+}
+
+.featured-theses .info-item {
+  border: none;
+}
+
+.highlighted {
+  background-color: #C8E9EF;
+}
+
+footer {
+  height: 72px;
+  font-size: 0.75rem;
+  border-top: 1px solid #B7B1A9;
+  padding-top: 16px;
+}
+
+footer .container {
+  justify-content: space-between;
+}
+
+footer a {
+  padding-left: 8px;
 }
