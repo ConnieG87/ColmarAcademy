@@ -42,12 +42,12 @@ a {
 }
 
 .course img, .media-container img, video {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
 }
 
-/* HEADER */
+  /* HEADER */
 
 header .container, footer .container {
   justify-content: space-between;
@@ -131,14 +131,17 @@ nav.mobile {
   padding-bottom: 24px;
 }
 
-p .author {
+p.author {
   font-size: 0.75rem;
 }
 
 .featured-info, .featured-theses {
-  width: 40%;
+  /*Specification inconsistency here: 60% + 40% width of elements with 24px margin in between is more than 100%.
+  Therefore the width will grow to fill the remaining space*/
+  width: 35%;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   margin-left: 24px;
 }
 
