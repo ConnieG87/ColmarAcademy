@@ -1,0 +1,7 @@
+- Optimise images
+- Add icons
+- Colors
+- Fonts
+- Animations: highlight on hoover, buttons
+- Accessibility tags
+- Comment design decisions
