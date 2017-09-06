@@ -158,7 +158,11 @@ p.author {
 }
 
 .info-item .media-container {
-  width: 35%;
+   width: 35%;
+ }
+
+.info-item .media-container img.mobile {
+  display: none;
 }
 
 .info-item .description {
@@ -246,4 +250,148 @@ footer {
 
 footer a {
   padding-left: 8px;
+}
+
+/* MOBILE VERSION, BREAKPOINT NOW AT 640px */
+@media only screen and (max-width: 640px) {
+
+  .container {
+    margin: 0 16px;
+  }
+
+  .logo {
+    flex-grow: 1;
+  }
+
+  .logo span {
+    display: none;
+  }
+
+  nav.desktop {
+    display: none;
+  }
+
+  nav.mobile {
+    display: flex;
+    flex-grow: 2;   /* navigation should take up 2/3 of the screen, so it should grow twice as fast as the logo. */
+  }
+
+  nav ul {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .banner .container {
+    margin: 0;
+    flex-wrap: wrap;
+  }
+
+  .banner .media-container {
+    width: 100%;
+    margin: 0;
+    /*picture is limited in height and vertically centered in mobile spec*/
+    height: 275px;
+    display: flex;
+    align-items: center;
+  }
+
+  .cta {
+    width: 100%;
+    margin: 32px 16px;
+  }
+
+  .cta .subtitle {
+    padding-bottom: 24px;
+  }
+
+  .main-article {
+    display: none;
+  }
+
+  .featured-info {
+    width: 100%;
+    margin-left: 0;
+    padding-top: 16px;
+    padding-bottom: 0;
+  }
+
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border: none;
+  }
+
+  .info-item .media-container {
+    width: 100%;
+  }
+
+  .info-item .media-container img.desktop {
+    display: none;
+  }
+
+  .info-item .media-container img.mobile {
+    display: block;
+  }
+
+  .info-item .description {
+    width: 100%;
+    padding: 32px 16px;
+  }
+
+  .courses {
+    border-top: 1px solid #B7B1A9;
+    border-bottom: 1px solid #B7B1A9;
+    background-color: #FFF;
+    padding-bottom: 24px;
+  }
+
+  .container.small {
+    margin: 0 16px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .course {
+    width: auto;
+    background-color: #B7B1A9;
+    margin: 0 0 8px 0;
+  }
+
+  .course img, span.category, .course p {
+    display: none;
+  }
+
+  .course h3 {
+    padding-bottom: 0;
+  }
+
+  .thesis h2 {
+    padding-bottom: 16px;
+  }
+
+  .featured-theses, .acc-article {
+    display: none;
+  }
+
+  .video-section {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  footer {
+    border: none;
+    height: auto;
+  }
+
+  footer span {
+    font-size: 1rem;
+    padding-bottom: 16px;
+  }
+
+  footer .links {
+    display: none;
+  }
+
 }
