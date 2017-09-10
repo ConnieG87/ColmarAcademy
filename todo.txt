@@ -5,10 +5,11 @@ v Make header static
 
 Visual design: 
 v Button styles
-- Add icons
+v Add icons
 v Colors
 v Fonts
 v Animations: highlight on hoover, buttons
+- favicon
 
 Code:
 - Accessibility tags
