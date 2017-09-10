@@ -60,7 +60,7 @@ i {
   display: block;
 }
 
-/* Used to make the divs in Information and Thesis into links */
+/*Used to make the divs in Information and Thesis Exhibits into links*/
 .link-span {
   position:absolute;
   width:100%;
@@ -91,7 +91,7 @@ i {
   color: #092140;
 }
 
-  /* HEADER */
+/* HEADER */
 
 header .container, footer .container {
   justify-content: space-between;
@@ -100,7 +100,6 @@ header .container, footer .container {
 header .container {
   height: 64px;
   align-items: center;
-
 }
 
 header {
@@ -185,7 +184,7 @@ p.author {
 
 .featured-info, .featured-theses {
   /*Specification inconsistency here: 60% + 40% width of elements with 24px margin in between is more than 100%.
-  Therefore the width will grow to fill the remaining space*/
+  Therefore the width will grow from 35% to fill the remaining space*/
   width: 35%;
   display: flex;
   flex-direction: column;
@@ -242,8 +241,9 @@ p.author {
 }
 
 /*Some items are highlighted in the specs, which was done with this code.
-I have chosen to highlight them on hover instead and make the whole div a link.
+I have chosen to highlight them on hover instead and make the whole div a link.*/
 
+/*
 .highlighted {
   background-color: #C8E9EF;
 }*/
@@ -309,7 +309,8 @@ span.category {
   margin-bottom: 32px;
 }
 
-/* No longer needed as the border of info-item is removed in the information section
+/* No longer needed as the border of info-item is removed in the information section*/
+/*
 .featured-theses .info-item {
   border: none;
 }*/
@@ -319,7 +320,7 @@ span.category {
 footer {
   height: 72px;
   font-size: 0.8rem;
-  /*border-top: 1px solid #B7B1A9; No longer desired because the footer has a background color */
+  /*border-top: 1px solid #B7B1A9;*/  /* No longer desired because the footer has a background color */
   padding-top: 16px;
   background-color: #092140;
   color: #FFF;
@@ -334,7 +335,8 @@ footer a:hover {
   color: #FFF;
 }
 
-/* MOBILE VERSION, BREAKPOINT NOW AT 640px */
+/* MOBILE VERSION, BREAKPOINT AT 640px */
+
 @media only screen and (max-width: 640px) {
 
   .container {
@@ -342,6 +344,7 @@ footer a:hover {
   }
 
   /* Header */
+
   .logo {
     flex-grow: 1;
   }
@@ -362,6 +365,7 @@ footer a:hover {
   }
 
   /* Banner */
+
   .banner .container {
     margin: 0;
     flex-wrap: wrap;
@@ -370,8 +374,7 @@ footer a:hover {
   .banner .media-container {
     width: 100%;
     margin: 0;
-    /*picture is limited in height and vertically centered in mobile spec*/
-    height: 275px;
+    height: 275px;  /*picture is limited in height and vertically centered in mobile spec*/
     display: flex;
     align-items: center;
   }
@@ -386,6 +389,7 @@ footer a:hover {
   }
 
   /* Information */
+
   .main-article {
     display: none;
   }
@@ -422,11 +426,16 @@ footer a:hover {
   }
 
   /* Courses */
+
   .courses {
     border-top: 1px solid #092140;
     border-bottom: 1px solid #092140;
     background-color: #FFF;
     padding-bottom: 24px;
+  }
+
+  .courses h2 {
+    color: #000;
   }
 
   .container.small {
@@ -451,6 +460,7 @@ footer a:hover {
   }
 
   /* Thesis */
+
   .thesis h2 {
     padding-bottom: 16px;
   }
@@ -465,6 +475,7 @@ footer a:hover {
   }
 
   /* Footer */
+
   footer {
     border: none;
     height: auto;
