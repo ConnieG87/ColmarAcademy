@@ -1,7 +1,15 @@
-- Optimise images
+v Optimise images
+
+Interaction:
+v Make header static
+
+Visual design: 
+v Button styles
 - Add icons
-- Colors
-- Fonts
-- Animations: highlight on hoover, buttons
+v Colors
+v Fonts
+v Animations: highlight on hoover, buttons
+
+Code:
 - Accessibility tags
-- Comment design decisions
+v Comment design decisions

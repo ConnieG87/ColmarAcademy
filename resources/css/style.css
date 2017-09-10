@@ -1,26 +1,30 @@
 /* TEXT STYLES */
 
 html {
-  font-family: Helvetica, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 14px;
 }
 
+body {
+  line-height: 1.3;
+}
+
 h1, h2, h3 {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   padding-bottom: 32px;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   padding-top: 32px;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   padding-bottom: 8px;
 }
 
@@ -47,6 +51,38 @@ a {
   display: block;
 }
 
+/* Used to make the divs in Information and Thesis into links */
+.link-span {
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+}
+
+.button {
+  background-color: #092140;
+  padding: 8px;
+  color: white;
+  text-align: center;
+  border: 1px solid #14488C;
+  border-radius: 8px;
+  transition: all 500ms;
+  /*width: 75%;
+  margin: 0 auto;*/
+}
+
+.button:hover {
+  background-color: #14488C;
+  border-color: #092140;
+}
+
+.button:active {
+  background-color: #D0ECFF;
+  color: #092140;
+}
+
   /* HEADER */
 
 header .container, footer .container {
@@ -58,20 +94,30 @@ header .container {
   align-items: center;
 }
 
+header {
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  z-index: 100;
+}
+
 .logo {
   height: 32px;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   text-transform: uppercase;
   display: flex;
   align-items: center;
 }
 
+.logo img {
+  padding-right: 4px;
+}
+
 .logo .academy {
-  color: #B7B1A9;
+  color: #14488C;
 }
 
 nav ul {
-  font-size: 1.2rem;
   display: flex;
 }
 
@@ -86,7 +132,8 @@ nav.mobile {
 /* BANNER */
 
 .banner {
-  background-color: #B7B1A9;
+  background-color: #B2C8C6;
+  padding-top: 64px; /*offset for the fixed header*/
 }
 
 .banner .media-container {
@@ -96,7 +143,7 @@ nav.mobile {
 
 .cta {
   margin-left: 24px;
-  width: 30%;
+  width: 25%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -105,15 +152,6 @@ nav.mobile {
 .cta .subtitle {
   font-size: 1.2rem;
   padding-bottom: 32px;
-}
-
-.cta .button {
-  background-color: #4D4F53;
-  padding: 8px;
-  color: white;
-  text-align: center;
-  /*width: 75%;
-  margin: 0 auto;*/
 }
 
 /* INFORMATION */
@@ -131,7 +169,8 @@ nav.mobile {
 }
 
 p.author {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
+  color: #798887;
 }
 
 .featured-info, .featured-theses {
@@ -153,7 +192,14 @@ p.author {
 .info-item {
   display: flex;
   padding: 16px;
-  border: 1px solid #B7B1A9;
+  position: relative;
+  transition: background-color 500ms;
+  /*Specs show borders here, but these are removed for aesthetic reasons and to make them consistent with the items in the thesis section*/
+  /*border: 1px solid #B7B1A9;*/
+}
+
+.info-item:hover {
+  background-color: #D0ECFF;
 }
 
 .info-item .media-container {
@@ -173,18 +219,23 @@ p.author {
 }
 
 .info-item a {
-  color: #3DB7E4;
+  text-decoration: underline;
+  color: #14488C;
   padding-top: 8px;
+  z-index: 10; /*makes sure this link appears on top of the full-div link*/
 }
+
+/*Some items are highlighted in the specs, which was done with this code.
+I have chosen to highlight them on hover instead and make the whole block a link.
 
 .highlighted {
   background-color: #C8E9EF;
-}
+}*/
 
 /* COURSES */
 
 .courses {
-  background-color: #B7B1A9;
+  background-color: #798887;
   padding-bottom: 16px;
 }
 
@@ -203,6 +254,13 @@ p.author {
   margin: 16px;
   flex-grow: 1;
   background-color: white;
+  position: relative;
+  transition: all 250ms;
+}
+
+.course:hover {
+  color: #14488C;
+  font-weight: 600;
 }
 
 .course-info {
@@ -234,20 +292,24 @@ span.category {
   margin-bottom: 32px;
 }
 
+/* No longer needed as the border of info-item is removed in the information section
 .featured-theses .info-item {
   border: none;
-}
+}*/
 
 /* FOOTER */
 
 footer {
   height: 72px;
-  font-size: 0.75rem;
-  border-top: 1px solid #B7B1A9;
+  font-size: 0.8rem;
+  /*border-top: 1px solid #B7B1A9; No longer desired because the footer has a background color */
   padding-top: 16px;
+  background-color: #092140;
+  color: #FFF;
 }
 
 footer a {
+  color: #FFF;
   padding-left: 8px;
 }
 
@@ -340,8 +402,8 @@ footer a {
 
   /* Courses */
   .courses {
-    border-top: 1px solid #B7B1A9;
-    border-bottom: 1px solid #B7B1A9;
+    border-top: 1px solid #092140;
+    border-bottom: 1px solid #092140;
     background-color: #FFF;
     padding-bottom: 24px;
   }
@@ -354,8 +416,9 @@ footer a {
 
   .course {
     width: auto;
-    background-color: #B7B1A9;
+    background-color: #798887;
     margin: 0 0 8px 0;
+    color: #FFF;
   }
 
   .course img, span.category, .course p {
